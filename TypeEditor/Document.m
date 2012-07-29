@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Jerome Baum. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #import "Document.h"
 #import "TypeRegistry.h"
 #import "TypeTypeInstance.h"
@@ -21,6 +23,8 @@
 
 @implementation Document
 
+@synthesize rootInstance;
+@synthesize registry;
 @synthesize dataSource;
 @synthesize outlineView;
 
@@ -28,15 +32,22 @@
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        TypeRegistry *reg = [TypeRegistry defaultRegistry];
+        [reg registerType:[[NullType new] autorelease]];
+        [reg registerType:[[StringType new] autorelease]];
+        [reg registerType:[[ListType new] autorelease]];
+        [reg registerType:[[TypeType new] autorelease]];
+        [reg registerType:[[AnyType new] autorelease]];
+        [reg registerType:[[ChoiceType new] autorelease]];
+        [reg registerType:[[DictionaryType new] autorelease]];
+        [reg registerType:[[ObjectType new] autorelease]];
+        [self setRegistry:reg];
     }
     return self;
 }
 
 - (NSString *)windowNibName
 {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"Document";
 }
 
@@ -44,20 +55,12 @@
 {
     [super windowControllerDidLoadNib:aController];
     
-
-    TypeRegistry *registry = [TypeRegistry defaultRegistry];
-    [registry registerType:[[NullType new] autorelease]];
-    [registry registerType:[[StringType new] autorelease]];
-    [registry registerType:[[ListType new] autorelease]];
-    [registry registerType:[[TypeType new] autorelease]];
-    [registry registerType:[[AnyType new] autorelease]];
-    [registry registerType:[[ChoiceType new] autorelease]];
-    [registry registerType:[[DictionaryType new] autorelease]];
-    [registry registerType:[[ObjectType new] autorelease]];
+    if (![self rootInstance]) {
+        id root = [[[self registry] mapNameToType:@"AnyType"] instance];
+        [self setRootInstance:root];
+    }
     
-    id root = [[registry mapNameToType:@"AnyType"] instance];
-    
-    [[self dataSource] setRootItem:root];
+    [[self dataSource] setRootItem:[self rootInstance]];
     [[self dataSource] set_outlineView:[self outlineView]];
     [[self outlineView] setDataSource:[self dataSource]];
     [[self outlineView] setDelegate:[self dataSource]];
@@ -68,22 +71,52 @@
     return YES;
 }
 
-- (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
+- (NSData *)dataOfType:(NSString *)typeName
+                 error:(NSError **)outError
 {
-    // Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
-    // You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-    NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-    @throw exception;
-    return nil;
+    id plist = [[[self dataSource] rootItem] toPlist];
+    id *error; error = NULL;
+    NSData *data = [NSPropertyListSerialization dataFromPropertyList:plist
+                                        format:NSPropertyListXMLFormat_v1_0
+                                                    errorDescription:error];
+    if (error) {
+        id dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                   *error,
+                   NSLocalizedDescriptionKey,
+                   nil];
+        id error = [NSError errorWithDomain:@"Cocoa"
+                                       code:NSFileWriteUnknownError
+                                   userInfo:dict];
+        outError = &error;
+        return nil;
+    }
+    return data;
 }
 
-- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
+- (BOOL)readFromData:(NSData *)data
+              ofType:(NSString *)typeName
+               error:(NSError **)outError
 {
-    // Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning NO.
-    // You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.
-    // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
-    NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-    @throw exception;
+    id *error; error = NULL;
+    NSPropertyListFormat *format; format = NULL;
+    id plist = [NSPropertyListSerialization propertyListFromData:data
+                                                mutabilityOption:0
+                                                          format:format
+                                                errorDescription:error];
+    if (error) {
+        id dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                   *error,
+                   NSLocalizedDescriptionKey,
+                   nil];
+        id error = [NSError errorWithDomain:@"Cocoa"
+                                       code:NSFileReadUnknownError
+                                   userInfo:dict];
+        outError = &error;
+        return NO;
+    }
+    id root = [[[self registry] mapNameToType:@"AnyType"] instance];
+    [root loadPlist:plist];
+    [self setRootInstance:root];
     return YES;
 }
 

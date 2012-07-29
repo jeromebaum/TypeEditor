@@ -11,6 +11,8 @@
 
 @interface Document : NSDocument
 
+@property (retain) id registry;
+@property (retain) id rootInstance;
 @property (assign) IBOutlet TypeOutlineViewManager *dataSource;
 @property (assign) IBOutlet NSOutlineView *outlineView;
 
