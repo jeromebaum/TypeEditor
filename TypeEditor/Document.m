@@ -7,8 +7,22 @@
 //
 
 #import "Document.h"
+#import "TypeRegistry.h"
+#import "TypeTypeInstance.h"
+
+#import "NullType.h"
+#import "StringType.h"
+#import "ListType.h"
+#import "TypeType.h"
+#import "AnyType.h"
+#import "ChoiceType.h"
+#import "DictionaryType.h"
+#import "ObjectType.h"
 
 @implementation Document
+
+@synthesize dataSource;
+@synthesize outlineView;
 
 - (id)init
 {
@@ -29,7 +43,24 @@
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    
+
+    TypeRegistry *registry = [TypeRegistry defaultRegistry];
+    [registry registerType:[[NullType new] autorelease]];
+    [registry registerType:[[StringType new] autorelease]];
+    [registry registerType:[[ListType new] autorelease]];
+    [registry registerType:[[TypeType new] autorelease]];
+    [registry registerType:[[AnyType new] autorelease]];
+    [registry registerType:[[ChoiceType new] autorelease]];
+    [registry registerType:[[DictionaryType new] autorelease]];
+    [registry registerType:[[ObjectType new] autorelease]];
+    
+    id root = [[registry mapNameToType:@"AnyType"] instance];
+    
+    [[self dataSource] setRootItem:root];
+    [[self dataSource] set_outlineView:[self outlineView]];
+    [[self outlineView] setDataSource:[self dataSource]];
+    [[self outlineView] setDelegate:[self dataSource]];
 }
 
 + (BOOL)autosavesInPlace

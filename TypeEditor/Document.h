@@ -7,7 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "TypeOutlineViewManager.h"
 
 @interface Document : NSDocument
+
+@property (assign) IBOutlet TypeOutlineViewManager *dataSource;
+@property (assign) IBOutlet NSOutlineView *outlineView;
 
 @end
