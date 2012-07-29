@@ -11,6 +11,7 @@
 @interface TypeOutlineViewManager : NSObject <NSOutlineViewDataSource, NSOutlineViewDelegate, NSMenuDelegate>
 
 @property (assign) NSOutlineView *_outlineView;
+@property (assign) NSDocument *document;
 @property (retain) id rootItem;
 @property (retain) NSMapTable *parentChildToIndex;
 

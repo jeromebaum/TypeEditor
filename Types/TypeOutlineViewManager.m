@@ -12,6 +12,7 @@
 @implementation TypeOutlineViewManager
 
 @synthesize _outlineView;
+@synthesize document;
 @synthesize rootItem;
 @synthesize parentChildToIndex;
 
@@ -63,6 +64,21 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     return @"(unknown)";
 }
 
+- (void)beforeChange:(NSString *)description {
+    if ([self document]) {
+        [[[self document] undoManager] setActionName:description];
+        [[[[self document] undoManager] prepareWithInvocationTarget:self]
+         undoChange:[[self rootItem] toPlist]];
+    }
+}
+
+- (void)undoChange:(id)plist {
+    [[[[self document] undoManager] prepareWithInvocationTarget:self]
+     undoChange:[[self rootItem] toPlist]];
+    [[self rootItem] loadPlist:plist];
+    [[self _outlineView] reloadItem:nil reloadChildren:YES];
+}
+
 - (void)outlineView:(NSOutlineView *)outlineView
      setObjectValue:(id)object
      forTableColumn:(NSTableColumn *)tableColumn
@@ -71,9 +87,11 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         id parent = [outlineView parentForItem:item];
         int relativeIndex = [self parentIndex:item
                                   outlineView:outlineView];
+        [self beforeChange:@"change label"];
         [parent setCellLabel:object atIndex:relativeIndex];
     }
     if ([[tableColumn identifier] isEqual:@"value"]) {
+        [self beforeChange:@"change value"];
         [item setCellValue:object];
     }
     [outlineView reloadItem:nil reloadChildren:YES];
@@ -144,6 +162,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         index = 0;
     }
     if ([parent canCreateChildAtIndex:index]) {
+        [self beforeChange:@"add child above"];
         [parent createChildAtIndex:index];
     }
     [[self _outlineView] reloadItem:nil reloadChildren:YES];
@@ -153,6 +172,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     id item = [[self _outlineView]
                itemAtRow:[[self _outlineView] clickedRow]];
     if ([item canCreateChildAtIndex:0]) {
+        [self beforeChange:@"add child below"];
         [item createChildAtIndex:0];
     }
     [[self _outlineView] reloadItem:nil reloadChildren:YES];
@@ -170,6 +190,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         index = 0;
     }
     if ([parent canRemoveChildAtIndex:index]) {
+        [self beforeChange:@"remove child"];
         [parent removeChildAtIndex:index];
     }
     [[self _outlineView] reloadItem:nil reloadChildren:YES];
@@ -187,6 +208,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         index = 0;
     }
     if ([parent canCreateChildAtIndex:index+1]) {
+        [self beforeChange:@"add child inside"];
         [parent createChildAtIndex:index+1];
     }
     [[self _outlineView] reloadItem:nil reloadChildren:YES];
