@@ -39,11 +39,11 @@
 
 - (void)loadPlist:(id)plist {
     [self setValue:[plist objectForKey:@"typeName"]];
-    if ([[self value] respondsToSelector:@selector(setMetaInstance:)]) {
+    if ([[self concreteType] respondsToSelector:@selector(setMetaInstance:)]) {
         id metaType = [[self niceMetaInstance] instanceType];
         id metaInstance = [metaType instance];
         [metaInstance loadPlist:[plist objectForKey:@"typeParameters"]];
-        [[self value] setMetaInstance:metaInstance];
+        [[self concreteType] setMetaInstance:metaInstance];
     }
 }
 
