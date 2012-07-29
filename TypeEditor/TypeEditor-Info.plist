@@ -9,15 +9,15 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
-				<string>typed</string>
+				<string>typea</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string></string>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>AnyType</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
-				<string>TYPE</string>
+				<string>TYPA</string>
 			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
