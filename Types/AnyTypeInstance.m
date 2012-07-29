@@ -94,10 +94,10 @@
 }
 
 - (void)dealloc {
+    [self deregisterObserver];
     [self setInstanceType:nil];
     [self setTypeType:nil];
     [self setTypeInstance:nil];
-    [self deregisterObserver];
     [super dealloc];
 }
 
