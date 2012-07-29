@@ -67,6 +67,8 @@
     }
     
     [[self dataSource] setRootItem:[self rootInstance]];
+    
+    [[self dataSource] setDocument:self];
     [[self dataSource] set_outlineView:[self outlineView]];
     [[self outlineView] setDataSource:[self dataSource]];
     [[self outlineView] setDelegate:[self dataSource]];
