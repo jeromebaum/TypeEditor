@@ -27,7 +27,9 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@", [self toPlist]];
+    return [NSString stringWithFormat:@"%@ %@",
+            [self className],
+            [self toPlist]];
 }
 
 - (void)loadPlist:(id)plist { }
