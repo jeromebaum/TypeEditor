@@ -18,6 +18,25 @@
 		D7B8DC5F15C5E2CC00375F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B8DC3C15C5E2CC00375F95 /* Cocoa.framework */; };
 		D7B8DC6715C5E2CC00375F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7B8DC6515C5E2CC00375F95 /* InfoPlist.strings */; };
 		D7B8DC6A15C5E2CC00375F95 /* TypeEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC6915C5E2CC00375F95 /* TypeEditorTests.m */; };
+		D7B8DC9C15C5E33E00375F95 /* AnyType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC7515C5E33E00375F95 /* AnyType.m */; };
+		D7B8DC9D15C5E33E00375F95 /* AnyTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC7715C5E33E00375F95 /* AnyTypeInstance.m */; };
+		D7B8DC9E15C5E33E00375F95 /* BaseTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC7915C5E33E00375F95 /* BaseTypeInstance.m */; };
+		D7B8DC9F15C5E33E00375F95 /* ChoiceType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC7B15C5E33E00375F95 /* ChoiceType.m */; };
+		D7B8DCA015C5E33E00375F95 /* ChoiceTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC7D15C5E33E00375F95 /* ChoiceTypeInstance.m */; };
+		D7B8DCA115C5E33E00375F95 /* DictionaryType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC7F15C5E33E00375F95 /* DictionaryType.m */; };
+		D7B8DCA215C5E33E00375F95 /* DictionaryTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8115C5E33E00375F95 /* DictionaryTypeInstance.m */; };
+		D7B8DCA315C5E33E00375F95 /* ListType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8315C5E33E00375F95 /* ListType.m */; };
+		D7B8DCA415C5E33E00375F95 /* ListTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8515C5E33E00375F95 /* ListTypeInstance.m */; };
+		D7B8DCA515C5E33E00375F95 /* NullType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8715C5E33E00375F95 /* NullType.m */; };
+		D7B8DCA615C5E33E00375F95 /* NullTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8915C5E33E00375F95 /* NullTypeInstance.m */; };
+		D7B8DCA715C5E33E00375F95 /* ObjectType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8B15C5E33E00375F95 /* ObjectType.m */; };
+		D7B8DCA815C5E33E00375F95 /* ObjectTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8D15C5E33E00375F95 /* ObjectTypeInstance.m */; };
+		D7B8DCA915C5E33E00375F95 /* StringType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC8F15C5E33E00375F95 /* StringType.m */; };
+		D7B8DCAA15C5E33E00375F95 /* StringTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC9115C5E33E00375F95 /* StringTypeInstance.m */; };
+		D7B8DCAB15C5E33E00375F95 /* TypeOutlineViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC9515C5E33E00375F95 /* TypeOutlineViewManager.m */; };
+		D7B8DCAC15C5E33E00375F95 /* TypeRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC9715C5E33E00375F95 /* TypeRegistry.m */; };
+		D7B8DCAD15C5E33E00375F95 /* TypeType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC9915C5E33E00375F95 /* TypeType.m */; };
+		D7B8DCAE15C5E33E00375F95 /* TypeTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8DC9B15C5E33E00375F95 /* TypeTypeInstance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +70,46 @@
 		D7B8DC6615C5E2CC00375F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7B8DC6815C5E2CC00375F95 /* TypeEditorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeEditorTests.h; sourceTree = "<group>"; };
 		D7B8DC6915C5E2CC00375F95 /* TypeEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeEditorTests.m; sourceTree = "<group>"; };
+		D7B8DC7415C5E33E00375F95 /* AnyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyType.h; sourceTree = "<group>"; };
+		D7B8DC7515C5E33E00375F95 /* AnyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyType.m; sourceTree = "<group>"; };
+		D7B8DC7615C5E33E00375F95 /* AnyTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC7715C5E33E00375F95 /* AnyTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC7815C5E33E00375F95 /* BaseTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC7915C5E33E00375F95 /* BaseTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC7A15C5E33E00375F95 /* ChoiceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceType.h; sourceTree = "<group>"; };
+		D7B8DC7B15C5E33E00375F95 /* ChoiceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceType.m; sourceTree = "<group>"; };
+		D7B8DC7C15C5E33E00375F95 /* ChoiceTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC7D15C5E33E00375F95 /* ChoiceTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC7E15C5E33E00375F95 /* DictionaryType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryType.h; sourceTree = "<group>"; };
+		D7B8DC7F15C5E33E00375F95 /* DictionaryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryType.m; sourceTree = "<group>"; };
+		D7B8DC8015C5E33E00375F95 /* DictionaryTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC8115C5E33E00375F95 /* DictionaryTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC8215C5E33E00375F95 /* ListType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListType.h; sourceTree = "<group>"; };
+		D7B8DC8315C5E33E00375F95 /* ListType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListType.m; sourceTree = "<group>"; };
+		D7B8DC8415C5E33E00375F95 /* ListTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC8515C5E33E00375F95 /* ListTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC8615C5E33E00375F95 /* NullType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullType.h; sourceTree = "<group>"; };
+		D7B8DC8715C5E33E00375F95 /* NullType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullType.m; sourceTree = "<group>"; };
+		D7B8DC8815C5E33E00375F95 /* NullTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC8915C5E33E00375F95 /* NullTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC8A15C5E33E00375F95 /* ObjectType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectType.h; sourceTree = "<group>"; };
+		D7B8DC8B15C5E33E00375F95 /* ObjectType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectType.m; sourceTree = "<group>"; };
+		D7B8DC8C15C5E33E00375F95 /* ObjectTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC8D15C5E33E00375F95 /* ObjectTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC8E15C5E33E00375F95 /* StringType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringType.h; sourceTree = "<group>"; };
+		D7B8DC8F15C5E33E00375F95 /* StringType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringType.m; sourceTree = "<group>"; };
+		D7B8DC9015C5E33E00375F95 /* StringTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC9115C5E33E00375F95 /* StringTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringTypeInstance.m; sourceTree = "<group>"; };
+		D7B8DC9215C5E33E00375F95 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		D7B8DC9315C5E33E00375F95 /* TypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC9415C5E33E00375F95 /* TypeOutlineViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeOutlineViewManager.h; sourceTree = "<group>"; };
+		D7B8DC9515C5E33E00375F95 /* TypeOutlineViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeOutlineViewManager.m; sourceTree = "<group>"; };
+		D7B8DC9615C5E33E00375F95 /* TypeRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeRegistry.h; sourceTree = "<group>"; };
+		D7B8DC9715C5E33E00375F95 /* TypeRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeRegistry.m; sourceTree = "<group>"; };
+		D7B8DC9815C5E33E00375F95 /* TypeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeType.h; sourceTree = "<group>"; };
+		D7B8DC9915C5E33E00375F95 /* TypeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeType.m; sourceTree = "<group>"; };
+		D7B8DC9A15C5E33E00375F95 /* TypeTypeInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeTypeInstance.h; sourceTree = "<group>"; };
+		D7B8DC9B15C5E33E00375F95 /* TypeTypeInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeTypeInstance.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +136,7 @@
 		D7B8DC2D15C5E2CC00375F95 = {
 			isa = PBXGroup;
 			children = (
+				D7B8DC7315C5E33E00375F95 /* Types */,
 				D7B8DC4215C5E2CC00375F95 /* TypeEditor */,
 				D7B8DC6215C5E2CC00375F95 /* TypeEditorTests */,
 				D7B8DC3B15C5E2CC00375F95 /* Frameworks */,
@@ -154,6 +214,117 @@
 				D7B8DC6515C5E2CC00375F95 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7B8DC7315C5E33E00375F95 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC9215C5E33E00375F95 /* Type.h */,
+				D7B8DC9315C5E33E00375F95 /* TypeInstance.h */,
+				D7B8DC7815C5E33E00375F95 /* BaseTypeInstance.h */,
+				D7B8DC7915C5E33E00375F95 /* BaseTypeInstance.m */,
+				D7B8DC9415C5E33E00375F95 /* TypeOutlineViewManager.h */,
+				D7B8DC9515C5E33E00375F95 /* TypeOutlineViewManager.m */,
+				D7B8DCB315C5E37600375F95 /* NullType */,
+				D7B8DCB515C5E38500375F95 /* StringType */,
+				D7B8DCB215C5E36F00375F95 /* ListType */,
+				D7B8DCB615C5E39200375F95 /* TypeType */,
+				D7B8DCAF15C5E35900375F95 /* AnyType */,
+				D7B8DCB015C5E36100375F95 /* ChoiceType */,
+				D7B8DCB115C5E36800375F95 /* DictionaryType */,
+				D7B8DCB415C5E37D00375F95 /* ObjectType */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		D7B8DCAF15C5E35900375F95 /* AnyType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC7415C5E33E00375F95 /* AnyType.h */,
+				D7B8DC7515C5E33E00375F95 /* AnyType.m */,
+				D7B8DC7615C5E33E00375F95 /* AnyTypeInstance.h */,
+				D7B8DC7715C5E33E00375F95 /* AnyTypeInstance.m */,
+			);
+			name = AnyType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB015C5E36100375F95 /* ChoiceType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC7A15C5E33E00375F95 /* ChoiceType.h */,
+				D7B8DC7B15C5E33E00375F95 /* ChoiceType.m */,
+				D7B8DC7C15C5E33E00375F95 /* ChoiceTypeInstance.h */,
+				D7B8DC7D15C5E33E00375F95 /* ChoiceTypeInstance.m */,
+			);
+			name = ChoiceType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB115C5E36800375F95 /* DictionaryType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC7E15C5E33E00375F95 /* DictionaryType.h */,
+				D7B8DC7F15C5E33E00375F95 /* DictionaryType.m */,
+				D7B8DC8015C5E33E00375F95 /* DictionaryTypeInstance.h */,
+				D7B8DC8115C5E33E00375F95 /* DictionaryTypeInstance.m */,
+			);
+			name = DictionaryType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB215C5E36F00375F95 /* ListType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC8215C5E33E00375F95 /* ListType.h */,
+				D7B8DC8315C5E33E00375F95 /* ListType.m */,
+				D7B8DC8415C5E33E00375F95 /* ListTypeInstance.h */,
+				D7B8DC8515C5E33E00375F95 /* ListTypeInstance.m */,
+			);
+			name = ListType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB315C5E37600375F95 /* NullType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC8615C5E33E00375F95 /* NullType.h */,
+				D7B8DC8715C5E33E00375F95 /* NullType.m */,
+				D7B8DC8815C5E33E00375F95 /* NullTypeInstance.h */,
+				D7B8DC8915C5E33E00375F95 /* NullTypeInstance.m */,
+			);
+			name = NullType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB415C5E37D00375F95 /* ObjectType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC8A15C5E33E00375F95 /* ObjectType.h */,
+				D7B8DC8B15C5E33E00375F95 /* ObjectType.m */,
+				D7B8DC8C15C5E33E00375F95 /* ObjectTypeInstance.h */,
+				D7B8DC8D15C5E33E00375F95 /* ObjectTypeInstance.m */,
+			);
+			name = ObjectType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB515C5E38500375F95 /* StringType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC8E15C5E33E00375F95 /* StringType.h */,
+				D7B8DC8F15C5E33E00375F95 /* StringType.m */,
+				D7B8DC9015C5E33E00375F95 /* StringTypeInstance.h */,
+				D7B8DC9115C5E33E00375F95 /* StringTypeInstance.m */,
+			);
+			name = StringType;
+			sourceTree = "<group>";
+		};
+		D7B8DCB615C5E39200375F95 /* TypeType */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8DC9615C5E33E00375F95 /* TypeRegistry.h */,
+				D7B8DC9715C5E33E00375F95 /* TypeRegistry.m */,
+				D7B8DC9815C5E33E00375F95 /* TypeType.h */,
+				D7B8DC9915C5E33E00375F95 /* TypeType.m */,
+				D7B8DC9A15C5E33E00375F95 /* TypeTypeInstance.h */,
+				D7B8DC9B15C5E33E00375F95 /* TypeTypeInstance.m */,
+			);
+			name = TypeType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +438,25 @@
 			files = (
 				D7B8DC4915C5E2CC00375F95 /* main.m in Sources */,
 				D7B8DC5015C5E2CC00375F95 /* Document.m in Sources */,
+				D7B8DC9C15C5E33E00375F95 /* AnyType.m in Sources */,
+				D7B8DC9D15C5E33E00375F95 /* AnyTypeInstance.m in Sources */,
+				D7B8DC9E15C5E33E00375F95 /* BaseTypeInstance.m in Sources */,
+				D7B8DC9F15C5E33E00375F95 /* ChoiceType.m in Sources */,
+				D7B8DCA015C5E33E00375F95 /* ChoiceTypeInstance.m in Sources */,
+				D7B8DCA115C5E33E00375F95 /* DictionaryType.m in Sources */,
+				D7B8DCA215C5E33E00375F95 /* DictionaryTypeInstance.m in Sources */,
+				D7B8DCA315C5E33E00375F95 /* ListType.m in Sources */,
+				D7B8DCA415C5E33E00375F95 /* ListTypeInstance.m in Sources */,
+				D7B8DCA515C5E33E00375F95 /* NullType.m in Sources */,
+				D7B8DCA615C5E33E00375F95 /* NullTypeInstance.m in Sources */,
+				D7B8DCA715C5E33E00375F95 /* ObjectType.m in Sources */,
+				D7B8DCA815C5E33E00375F95 /* ObjectTypeInstance.m in Sources */,
+				D7B8DCA915C5E33E00375F95 /* StringType.m in Sources */,
+				D7B8DCAA15C5E33E00375F95 /* StringTypeInstance.m in Sources */,
+				D7B8DCAB15C5E33E00375F95 /* TypeOutlineViewManager.m in Sources */,
+				D7B8DCAC15C5E33E00375F95 /* TypeRegistry.m in Sources */,
+				D7B8DCAD15C5E33E00375F95 /* TypeType.m in Sources */,
+				D7B8DCAE15C5E33E00375F95 /* TypeTypeInstance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
