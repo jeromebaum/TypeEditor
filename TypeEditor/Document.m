@@ -46,6 +46,12 @@
     return self;
 }
 
+- (void)dealloc {
+    [self setRootInstance:nil];
+    [self setRegistry:nil];
+    [super dealloc];
+}
+
 - (NSString *)windowNibName
 {
     return @"Document";
