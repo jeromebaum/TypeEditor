@@ -36,20 +36,20 @@
 		D7B8DC3F15C5E2CC00375F95 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D7B8DC4015C5E2CC00375F95 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D7B8DC4115C5E2CC00375F95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D7B8DC4415C5E2CC00375F95 /* TypeEditor-Info.plist */ = {isa = PBXFileReference; path = "TypeEditor-Info.plist"; sourceTree = "<group>"; };
+		D7B8DC4415C5E2CC00375F95 /* TypeEditor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TypeEditor-Info.plist"; sourceTree = "<group>"; };
 		D7B8DC4615C5E2CC00375F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7B8DC4815C5E2CC00375F95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7B8DC4A15C5E2CC00375F95 /* TypeEditor-Prefix.pch */ = {isa = PBXFileReference; path = "TypeEditor-Prefix.pch"; sourceTree = "<group>"; };
+		D7B8DC4A15C5E2CC00375F95 /* TypeEditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TypeEditor-Prefix.pch"; sourceTree = "<group>"; };
 		D7B8DC4C15C5E2CC00375F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		D7B8DC4E15C5E2CC00375F95 /* Document.h */ = {isa = PBXFileReference; path = Document.h; sourceTree = "<group>"; };
+		D7B8DC4E15C5E2CC00375F95 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		D7B8DC4F15C5E2CC00375F95 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		D7B8DC5215C5E2CC00375F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
 		D7B8DC5515C5E2CC00375F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D7B8DC5C15C5E2CC00375F95 /* TypeEditorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypeEditorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B8DC5D15C5E2CC00375F95 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D7B8DC6415C5E2CC00375F95 /* TypeEditorTests-Info.plist */ = {isa = PBXFileReference; path = "TypeEditorTests-Info.plist"; sourceTree = "<group>"; };
+		D7B8DC6415C5E2CC00375F95 /* TypeEditorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TypeEditorTests-Info.plist"; sourceTree = "<group>"; };
 		D7B8DC6615C5E2CC00375F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D7B8DC6815C5E2CC00375F95 /* TypeEditorTests.h */ = {isa = PBXFileReference; path = TypeEditorTests.h; sourceTree = "<group>"; };
+		D7B8DC6815C5E2CC00375F95 /* TypeEditorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeEditorTests.h; sourceTree = "<group>"; };
 		D7B8DC6915C5E2CC00375F95 /* TypeEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeEditorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
