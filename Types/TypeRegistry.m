@@ -26,7 +26,7 @@
 
 - (id)mapNameToType:(NSString *)name {
     id type = [[self mapNamesToTypes] objectForKey:name];
-    return [[type class] new];
+    return [[[type class] new] autorelease];
 }
 
 - (NSString *)mapTypeToName:(id)type {
